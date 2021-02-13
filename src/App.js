@@ -1,10 +1,16 @@
 import './App.css';
 import TodoApp from "./TodoApp";
+import {ThemeProviderr} from "./contexts/ThemeContext";
+import {LanguageProvider} from "./contexts/LanguageContext";
 
 
 function App() {
   return (
-      <TodoApp/>
+    <LanguageProvider>
+      <ThemeProviderr>
+        <TodoApp/>
+      </ThemeProviderr>
+    </LanguageProvider>
   );
 }
 
